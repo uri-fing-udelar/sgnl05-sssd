@@ -85,8 +85,8 @@ class sssd (
 ) {
 
   # Fail on unsupported platforms
-  if ($::facts['os']['family'] == 'RedHat') and !($::facts['os']['release']['major'] in ['5', '6', '7', '25', '26']) {
-    fail("osfamily RedHat's os.release.major is <${::facts['os']['release']['major']}> and must be 5, 6 or 7 for EL and 25 or 26 for Fedora.")
+  if ($::facts['os']['family'] == 'RedHat') and !($::facts['os']['release']['major'] in ['5', '6', '7', '20', '21', '22', '23', '24', '25', '26']) {
+    fail("osfamily RedHat's os.release.major is <${::facts['os']['release']['major']}> and must be 5, 6 or 7 for EL and 20 to 26 for Fedora.")
   }
 
   if $::facts['os']['family'] == 'Suse' {
